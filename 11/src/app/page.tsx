@@ -1,13 +1,16 @@
-import SignIn from "@/app/components/sign-in";
-import SignOut from "@/app/components/sing-out";
-import { UserInfo } from "@/app/components/userInfo";
+import { Button } from "@heroui/button";
 
 export default function Home() {
   return (
-    <div>
-      <SignIn />
-      <SignOut />
-      <UserInfo />
+    <div className="flex justify-between">
+      <div>
+        <h1 className="text-xl mt-2">Top Posts</h1>
+      </div>
+      <div>
+        <Button color="secondary" variant="bordered">
+          Create a Topic
+        </Button>
+      </div>
     </div>
   );
 }
