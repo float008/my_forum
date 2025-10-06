@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SessionProvider } from "next-auth/react";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Header } from "./components/Header";
 import "./globals.css";
@@ -30,8 +31,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <HeroUIProviders>
-          <Header />
-          <div className="max-w-[1024px] px-8 mt-5 mx-auto">{children}</div>
+          <SessionProvider>
+            <Header />
+            <div className="max-w-[1024px] px-8 mt-5 mx-auto">{children}</div>
+          </SessionProvider>
         </HeroUIProviders>
       </body>
     </html>

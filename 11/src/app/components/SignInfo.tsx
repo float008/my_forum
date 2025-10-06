@@ -24,7 +24,7 @@ export default function SignInfo() {
         </PopoverTrigger>
         <PopoverContent>
           <form action={action.SignOutAction}>
-            <Button type="submit" color="secondary" href="#" variant="flat">
+            <Button type="submit" color="secondary" href="#" variant="bordered">
               Sign Out
             </Button>
           </form>

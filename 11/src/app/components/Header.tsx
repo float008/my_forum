@@ -5,7 +5,6 @@ import {
   NavbarContent,
   NavbarItem,
 } from "@heroui/react";
-import { SessionProvider } from "next-auth/react";
 import SignInfo from "./SignInfo";
 
 export const AcmeLogo = () => {
@@ -35,9 +34,7 @@ export const Header = () => {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
-          <SessionProvider>
-            <SignInfo />
-          </SessionProvider>
+          <SignInfo />
         </NavbarItem>
       </NavbarContent>
     </Navbar>

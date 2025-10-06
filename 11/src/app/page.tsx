@@ -1,4 +1,4 @@
-import { Button } from "@heroui/button";
+import { TopicCreateForm } from "./components/TopicCreateForm";
 
 export default function Home() {
   return (
@@ -7,9 +7,7 @@ export default function Home() {
         <h1 className="text-xl mt-2">Top Posts</h1>
       </div>
       <div>
-        <Button color="secondary" variant="bordered">
-          Create a Topic
-        </Button>
+        <TopicCreateForm />
       </div>
     </div>
   );
